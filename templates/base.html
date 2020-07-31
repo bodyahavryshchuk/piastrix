@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Piastrix</title>
+</head>
+<style type="text/css">
+	form{
+		margin: 0 auto;
+    	width: 200px;
+	}
+	input, select{
+		display: block;
+		margin-bottom: 15px;
+	}
+	#desc{
+		height: 200px;
+		width: 200px;
+	}
+</style>
+<body>
+		{% with messages = get_flashed_messages() %}
+		    {% if messages %}
+		        {% for message in messages %}
+		            <p style="color:red">{{ message }}</p>
+		        {% endfor %}
+		    {% endif %}
+		{% endwith %}
+
+{% block form %}
+{% endblock %}
+</body>
+</html>
